@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "TcpServer.h"
 
+#include "MyTest.h"
 int main(int argc, char* argv[])
 {
 #if 0
@@ -19,8 +20,10 @@ int main(int argc, char* argv[])
     chdir("/home/robin/luffy");
 #endif
     // 启动服务器
-    TcpServer* server = new TcpServer(port, 4);
-    server->run();
+    //TcpServer* server = new TcpServer(port, 4);
+    //server->run();
 
+    MyTest t;
+    t.test();
     return 0;
 }

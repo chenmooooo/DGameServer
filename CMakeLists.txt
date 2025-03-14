@@ -9,6 +9,8 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/reactor
         ${PROJECT_SOURCE_DIR}/tcp
         ${PROJECT_SOURCE_DIR}/thread
+        #test
+        ${PROJECT_SOURCE_DIR}/test
 )
 
 #添加子目录
@@ -17,8 +19,9 @@ add_subdirectory(http)
 add_subdirectory(reactor)
 add_subdirectory(tcp)
 add_subdirectory(thread)
+add_subdirectory(test)
 
-link_libraries(DGame_tcp DGame_http DGame_reactor DGame_thread DGame_common)
+link_libraries(DGame_tcp DGame_http DGame_reactor DGame_thread DGame_common test)
 
 
 add_executable(DGameServer main.cpp)
